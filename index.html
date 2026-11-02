@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laporan Cuaca</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🌤 Laporan Cuaca </h1>
+        <p>Mahakarya Super Keren Ciptaan Afian</p>
+    </header>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="cityInput"
+            placeholder="Masukkan nama kota..."
+            value="Semarang"
+        >
+
+        <button id="searchBtn" onclick="searchCity()">
+            Search
+        </button>
+    </div>
+
+    <div id="status" role="status">
+        Menghubungkan ke layanan cuaca...
+    </div>
+
+    <div id="locationResults" class="results"></div>
+
+    <main id="weatherContent" class="hidden">
+
+        <section class="weather-main">
+
+            <div class="location" id="location"></div>
+
+            <div class="date" id="date"></div>
+
+            <div class="temperature-area">
+
+                <div>
+                    <div class="temperature" id="temperature">
+                        --°C
+                    </div>
+
+                    <div class="description" id="description">
+                        Loading...
+                    </div>
+
+                    <div class="feels" id="feels"></div>
+                </div>
+
+                <div class="weather-icon" id="weatherIcon">
+                    🌤️
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="grid">
+
+            <div class="card">
+                <div class="card-label">💧 Kelembapan</div>
+                <div class="card-value" id="humidity">--%</div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">💨 Kecepatan Angin</div>
+                <div class="card-value" id="wind">-- km/h</div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">🌧️ Curah Hujan</div>
+                <div class="card-value" id="rain">-- mm</div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">🌡️ Peluang Hujan</div>
+                <div class="card-value" id="rainChance">--%</div>
+            </div>
+
+        </section>
+
+        <h2>📅 Prakiraan Cuaca 7 Hari</h2>
+
+        <section class="forecast" id="forecast"></section>
+
+        <h2>🌅 Informasi Matahari</h2>
+
+        <section class="sun-info">
+
+            <div class="card">
+                <div class="card-label">🌅 Matahari Terbit</div>
+                <div class="card-value" id="sunrise">--:--</div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">🌇 Matahari Terbenam</div>
+                <div class="card-value" id="sunset">--:--</div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Data cuaca disediakan oleh
+            <a href="https://open-meteo.com/" target="_blank">
+                Open-Meteo
+            </a>
+        </p>
+
+        <p>Global Weather Report | HTML, CSS & JavaScript</p>
+    </footer>
+
+</div>
+
+<!-- Menghubungkan JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
