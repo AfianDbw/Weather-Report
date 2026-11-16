@@ -1,0 +1,943 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oxanium:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0b1120;
+    color: #f1f5f9;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: #111c30;
+    border-bottom: 1px solid #24334c;
+}
+
+.logo {
+width: 40px;
+height: auto;
+position: absolute;
+top: 10px;
+left: 10px;
+}
+
+.status {
+    color: #94a3b8;
+    font-size: 13px;
+position: absolute;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: auto;
+    background: #22c55e;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 86%;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+/* SEARCH */
+
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.search-section h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.search-section p,
+.section-heading p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    width: 260px;
+    padding: 13px;
+    background: #17243a;
+    color: white;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* WEATHER CARDS */
+
+.weather-main {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.weather-card {
+    background: #111c30;
+    border: 1px solid #24334c;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.location h2 {
+    font-size: 25px;
+}
+
+#countryName {
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+.weather-icon {
+    font-size: 65px;
+}
+
+.temperature {
+    margin-top: 25px;
+}
+
+.temperature h1 {
+    font-size: 75px;
+    font-weight: 700;
+}
+
+.temperature p {
+    color: #cbd5e1;
+}
+
+.feels-like {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.updated {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 12px;
+}
+
+/* WEATHER DETAILS */
+
+.details-card h3 {
+    margin-bottom: 25px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.detail-item > span {
+    font-size: 25px;
+}
+
+.detail-item p {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 6px;
+}
+
+.detail-item h3 {
+    font-size: 17px;
+    margin: 0;
+}
+
+/* SECTIONS */
+
+.section-card {
+    margin-bottom: 25px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+/* HOURLY FORECAST */
+
+.hourly-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.hourly-item {
+    min-width: 105px;
+    text-align: center;
+    background: #1a2941;
+    padding: 18px 10px;
+    border-radius: 10px;
+}
+
+.hourly-item p {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.hourly-item .icon {
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.hourly-item h3 {
+    font-size: 18px;
+}
+
+/* MAP */
+
+#map {
+    width: 100%;
+    height: 480px;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.radar-button {
+    background: #334155;
+    font-size: 12px;
+}
+
+.radar-button.active {
+    background: #0891b2;
+}
+
+.map-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+/* DAILY FORECAST */
+
+.daily-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.daily-item {
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 5px;
+    border-bottom: 1px solid #24334c;
+}
+
+.daily-item:last-child {
+    border-bottom: none;
+}
+
+.daily-item .icon {
+    font-size: 25px;
+}
+
+.daily-item p {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.daily-item strong {
+    font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 2;
+}
+
+footer a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .search-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .weather-main {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .temperature h1 {
+        font-size: 60px;
+    }
+
+    .details-grid {
+        gap: 22px 10px;
+    }
+
+    .daily-item {
+        grid-template-columns: 1fr 35px 1fr 1fr;
+        gap: 8px;
+    }
+
+    .daily-item .rain-chance {
+        display: none;
+    }
+
+    #map {
+        height: 350px;
+    }
+
+    .section-heading {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo {
+        font-size: 17px;
+    }
+
+    .status {
+        font-size: 10px;
+    }
+
+    .weather-card {
+        padding: 18px;
+    }
+
+    .detail-item h3 {
+        font-size: 14px;
+    }
+}
+
+
+/* CITY AUTOCOMPLETE */
+
+.search-box {
+    position: relative;
+}
+
+.autocomplete-wrapper {
+    position: relative;
+    width: 260px;
+}
+
+.autocomplete-wrapper input {
+    width: 100%;
+}
+
+.suggestions-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+
+    background: #17243a;
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    max-height: 300px;
+    overflow-y: auto;
+
+    z-index: 1000;
+
+    display: none;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.suggestions-list.show {
+    display: block;
+}
+
+.suggestion-item {
+    width: 100%;
+    display: block;
+    text-align: left;
+
+    background: transparent;
+    color: white;
+
+    padding: 13px 15px;
+    border-radius: 0;
+
+    border-bottom: 1px solid #293850;
+}
+
+.suggestion-item:hover,
+.suggestion-item.active {
+    background: #263b59;
+}
+
+.suggestion-item strong {
+    display: block;
+    font-size: 14px;
+}
+
+.suggestion-item small {
+    display: block;
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.suggestions-empty {
+    padding: 15px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .autocomplete-wrapper {
+        width: 100%;
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+
+/* ========================================
+   JATKOSOTA THEME
+======================================== */
+
+:root {
+    --primary: #07558C;
+    --primary-hover: #064574;
+
+    --background: #AEB5B8;
+    --surface: #C8D0D2;
+    --surface-secondary: #DCE1E3;
+
+    --text: #101418;
+    --text-secondary: #4D5960;
+
+    --border: #89969B;
+    --white: #F4F7F8;
+    --black: #050505;
+}
+
+/* BODY */
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: var(--black);
+    border-bottom: 3px solid var(--primary);
+    color: var(--white);
+}
+
+.logo {
+    color: var(--white);
+}
+
+.status {
+    color: #C8D0D2;
+}
+
+.status-dot {
+    background: #3B9BDB;
+}
+
+/* MAIN HEADINGS */
+
+.search-section h1 {
+    color: var(--black);
+}
+
+.search-section p,
+.section-heading p {
+    color: var(--text-secondary);
+}
+
+/* SEARCH */
+
+.search-box input,
+.autocomplete-wrapper input {
+    background: var(--white);
+    color: var(--black);
+    border: 1px solid var(--border);
+}
+
+.search-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(7, 85, 140, 0.15);
+}
+
+.search-box input::placeholder {
+    color: #78858B;
+}
+
+/* BUTTONS */
+
+button {
+    background: var(--primary);
+    color: var(--white);
+    transition: 0.2s;
+}
+
+button:hover {
+    background: var(--primary-hover);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* AUTOCOMPLETE */
+
+.suggestions-list {
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.suggestion-item {
+    background: var(--white);
+    color: var(--black);
+    border-bottom: 1px solid #D4DADC;
+}
+
+.suggestion-item:hover,
+.suggestion-item.active {
+    background: #DCEAF3;
+}
+
+.suggestion-item small,
+.suggestions-empty {
+    color: var(--text-secondary);
+}
+
+/* WEATHER CARDS */
+
+.weather-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* CURRENT WEATHER */
+
+.subtitle,
+#countryName,
+.feels-like,
+.updated {
+    color: var(--text-secondary);
+}
+
+.temperature h1 {
+    color: var(--primary);
+}
+
+.temperature p {
+    color: var(--text-secondary);
+}
+
+/* ATMOSPHERIC DETAILS */
+
+.detail-item p {
+    color: var(--text-secondary);
+}
+
+.detail-item h3 {
+    color: var(--black);
+}
+
+/* FORECAST */
+
+.hourly-item {
+    background: var(--surface-secondary);
+    border: 1px solid var(--border);
+    color: var(--black);
+}
+
+.hourly-item p {
+    color: var(--text-secondary);
+}
+
+.hourly-item h3 {
+    color: var(--primary);
+}
+
+/* DAILY FORECAST */
+
+.daily-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.daily-item strong {
+    color: var(--black);
+}
+
+.daily-item p {
+    color: var(--text-secondary);
+}
+
+/* MAP */
+
+.radar-button {
+    background: var(--black);
+    color: var(--white);
+}
+
+.radar-button:hover {
+    background: var(--primary);
+}
+
+.radar-button.active {
+    background: var(--primary);
+}
+
+.map-info {
+    color: var(--text-secondary);
+}
+
+/* SECTION HEADINGS */
+
+.section-heading h2,
+.details-card h3 {
+    color: var(--black);
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--black);
+    color: #C8D0D2;
+}
+
+footer a {
+    color: #58A9E0;
+}
+
+/* SCROLLBAR */
+
+.hourly-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.hourly-container::-webkit-scrollbar-track {
+    background: #AEB5B8;
+    border-radius: 10px;
+}
+
+.hourly-container::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+
+
+/* ========================================
+   JATKOSOTA - GLOBAL TYPOGRAPHY
+   SINGLE FONT: OXANIUM
+======================================== */
+
+/* Seluruh elemen */
+
+*,
+*::before,
+*::after {
+    font-family: 'Oxanium', sans-serif !important;
+}
+
+/* Pengaturan dasar */
+
+body {
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+/* Logo */
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+/* Judul utama */
+
+.search-section h1 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Judul section */
+
+.section-heading h2,
+.details-card h3 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Angka suhu */
+
+.temperature h1 {
+    font-size: 75px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+/* Informasi atmosfer */
+
+.detail-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Prakiraan per jam */
+
+.hourly-item h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Prakiraan harian */
+
+.daily-item strong {
+    font-weight: 700;
+}
+
+/* Tombol */
+
+button {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Input pencarian */
+
+input {
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+/* Dropdown autocomplete */
+
+.suggestion-item strong {
+    font-weight: 700;
+}
+
+.suggestion-item small {
+    font-weight: 400;
+}
+
+/* Informasi tambahan */
+
+.subtitle,
+.updated,
+.feels-like,
+.section-heading p,
+.detail-item p,
+.map-info {
+    font-weight: 500;
+}
+
+/* Footer */
+
+footer {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+
+/* ========================================
+   JATKOSOTA HEADER BRANDING
+======================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #050505;
+    border-bottom: 3px solid #07558C;
+
+    padding: 12px 30px;
+}
+
+/* Container logo dan tulisan */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Gambar logo */
+
+.header-logo {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+/* Tulisan Weather Master */
+
+.logo-text {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #F4F7F8;
+    text-transform: uppercase;
+}
+
+/* Tampilan layar kecil */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .header-logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo-text {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+}
+
+
+/* ========================================
+   STICKY HEADER - WEATHER MASTER
+======================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    background: #050505;
+
+    border-bottom: 3px solid #07558C;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Mencegah konten header berubah */
+
+.navbar {
+    flex-shrink: 0;
+}
+
+/* Transisi tampilan */
+
+.navbar {
+    transition: box-shadow 0.3s ease;
+}
